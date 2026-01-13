@@ -23,7 +23,7 @@ function readJSON(path, defaultValue) {
 
     return JSON.parse(content);
   } catch (err) {
-    console.error(`⚠ Error reading ${path}. Resetting file.`);
+    console.error(`Error reading ${path}. Resetting file.`);
     fs.writeFileSync(path, JSON.stringify(defaultValue, null, 2));
     return defaultValue;
   }
